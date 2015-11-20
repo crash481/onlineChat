@@ -1,0 +1,17 @@
+﻿<Window x:Class="testWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="online чат" Height="450" Width="650" ResizeMode="NoResize">
+    <Grid>
+        <TextBox Name="loginBox"  HorizontalAlignment="Left" Height="25" Margin="10,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150"/>
+        <TextBox Name="passwordBox" HorizontalAlignment="Left" Height="25" Margin="197,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150"/>
+        <Button Name="loginButton" Content="Авторизация" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="100" Click="loginButton_Click"/>
+        <Button Name="registerButton" Content="Регистрация" HorizontalAlignment="Left" Margin="197,70,0,0" VerticalAlignment="Top" Width="100" Click="registerButton_Click"/>
+        <Button Name ="sendButton" Content="Отправить" HorizontalAlignment="Left" Margin="136,391,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.864,0.799" Click="sendButton_Click" IsEnabled="False"/>
+        <TextBox  Name ="messageToSend" HorizontalAlignment="Left" Height="22" Margin="10,350,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="400" IsEnabled="False" />
+        <TextBox Text="{Binding Path=messageBoxContext}" Name ="messageBox" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" Height="239" Margin="10,94,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" IsReadOnly="True"  VerticalAlignment="Top" Width="400" Cursor="Arrow" TextChanged="messageBox_TextChanged"/>
+        <TextBox Text="{Binding Path=onlineUsersBoxContext}" Name="onlineUsersBox" HorizontalAlignment="Left" Height="362" Margin="436,10,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="197"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="197,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.253,0.028"/>
+    </Grid>
+</Window>
